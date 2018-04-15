@@ -1,11 +1,11 @@
 #**Generating Redis Protocol**
 
 Generate the Redis protocol, in raw format, in order to use 'redis-cli --pipe' command to massively and quickly insert/delete.... keys in a redis server.
-It accepts as input a pipe with redis commands formatted as "DEL key", "SET key value" ...
+It accepts as input a pipe with redis commands formatted as "DEL,key", "SET,key,value" ...
 
 ####Usage:
 
-    echo "SET mykey1 value1\nDEL mykey2" > data.txt
+    echo "SET,mykey1,hello world" > data.txt
     cat data.txt | python gen_redis_proto.py | redis-cli --pipe
 
 
