@@ -8,7 +8,7 @@ It accepts as input a pipe with redis commands formatted as "SET key value" or "
 
 Usage:
 
-      echo "SET mykey1 value1\nSET mykey2 value2" > data.txt
+      echo "SET,mykey1,value1\nSET,mykey2,value2" > data.txt
       cat data.txt | python gen_redis_proto.py | redis-cli --pipe
 
 """
