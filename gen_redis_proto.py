@@ -46,4 +46,4 @@ def gen_redis_proto(*cmd):
 
 if __name__ == '__main__':
     for line in fileinput.input():
-        sys.stdout.write(gen_redis_proto(*line.rstrip().split(' ')))
+        sys.stdout.write(gen_redis_proto(*line.rstrip().split(',')))
